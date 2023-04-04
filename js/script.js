@@ -1,3 +1,8 @@
+var deckh = ["0","2gh","4","6hj","8","9","14","0","2"];
+var baralho = new Array(8);
+
+  
+
 // função para embaralhar a ordem inicial do array
 function shuffle2(array){
     var shuffled = array
@@ -27,4 +32,21 @@ function shuffle(array) {
     console.log ("e a nova posição do FELIZOLA é: "+ (neworder.findIndex(element => element ==='FELIZOLA')+1));
     console.log("Ordem Original: " +arr);
   }
+
+  function start(){
+    console.log("array inicial "+ deckh);
+    for (let pos = 0; pos < 8; pos++) {
+      sorteio = Math.floor(Math.random() * deckh.length);
+        baralho[pos]=deckh[sorteio];
+        deckh.splice(sorteio,1);
+    } 
+    console.log(baralho);
+      }
+      
+      
+    
+    
+  
+
+  
  
